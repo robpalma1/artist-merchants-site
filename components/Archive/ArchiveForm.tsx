@@ -33,7 +33,7 @@ export const ArchiveForm = () => {
 
       const data = await res.json()
 
-            // Track the unlock event with client identifier (wrapped safely)
+      // Track the unlock event with client identifier (wrapped safely)
       try {
         mixpanel.track('Archive Unlocked', {
           client: data.clientName ?? 'unknown',
@@ -45,6 +45,10 @@ export const ArchiveForm = () => {
       } catch (_) {}
 
       router.push('/archive')
+    } catch (error) {
+      setError('Incorrect password')
+    }
+  }
 
   return (
     <motion.div
