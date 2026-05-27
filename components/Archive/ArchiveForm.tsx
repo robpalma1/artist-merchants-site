@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router'
 
 import { motion } from 'framer-motion'
 import { mixpanel } from 'lib/mixpanel'
