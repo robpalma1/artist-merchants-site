@@ -77,8 +77,7 @@ export const HomeMenu = ({ description, contact, information }) => {
         ) : null}
         {menuActiveItem === 'archive' ? (
           <MenuItemOverlay onClose={() => setMenuActiveItem(null)}>
-            <div className="flex w-full min-w-[320px] flex-col gap-14">
-              <h2 className="pb-6 text-caption uppercase">Archive</h2>
+            <div className="mx-auto flex w-[240px] max-w-full flex-col">
               <ArchiveForm />
             </div>
           </MenuItemOverlay>

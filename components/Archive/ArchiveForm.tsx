@@ -71,7 +71,7 @@ export const ArchiveForm = () => {
             id="password"
             type="password"
             placeholder="Enter Password"
-            className="w-full flex-1 appearance-none rounded-[0px] border-b-1 border-solid border-white bg-transparent py-4 text-body-lg focus:outline-none"
+            className="w-full flex-1 appearance-none rounded-[0px] border-b-[0.5px] border-solid border-white bg-transparent px-24 py-4 text-center text-body-lg placeholder:text-white/60 focus:outline-none"
             ref={passwordRef}
           />
           <button
@@ -83,7 +83,7 @@ export const ArchiveForm = () => {
           </button>
         </div>
         {error ? (
-          <p className="text-caption uppercase" aria-live="polite">
+          <p className="text-center text-caption uppercase" aria-live="polite">
             {error}
           </p>
         ) : null}
