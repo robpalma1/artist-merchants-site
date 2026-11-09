@@ -52,7 +52,7 @@ export const ArchiveForm = () => {
 
   return (
     <motion.div
-      className="flex w-full flex-col gap-8 text-body-lg md:col-span-2"
+      className="flex w-full flex-col gap-8 text-14 leading-[150%] tracking-[0.01em] md:text-15 md:col-span-2"
       key="archive-locked"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -71,11 +71,11 @@ export const ArchiveForm = () => {
             id="password"
             type="password"
             placeholder="Enter Password"
-            className="w-full flex-1 appearance-none rounded-[0px] border-b-[0.5px] border-solid border-white bg-transparent px-24 py-4 text-center text-body-lg placeholder:text-white/60 focus:outline-none"
+            className="w-full flex-1 appearance-none rounded-[0px] border-b-[0.5px] border-solid border-white bg-transparent px-24 py-4 text-center text-14 leading-[150%] tracking-[0.01em] md:text-15 placeholder:text-white/60 focus:outline-none"
             ref={passwordRef}
           />
           <button
-            className="ease absolute -bottom-6 right-0 translate-x-8 p-12 text-left text-18 transition-transform duration-300 hover:translate-x-12"
+            className="ease absolute -bottom-6 right-0 translate-x-8 p-12 text-left text-16 transition-transform duration-300 hover:translate-x-12"
             type="submit"
           >
             <span className="sr-only">Submit</span>
