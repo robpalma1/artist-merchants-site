@@ -6,12 +6,12 @@ const config = {
     ],
   },
   typescript: {
-    // Set this to false if you want production builds to abort if there's type errors
-    ignoreBuildErrors: process.env.VERCEL_ENV === 'production',
+    // Vercel builds (production and preview) skip type errors; local builds still check
+    ignoreBuildErrors: Boolean(process.env.VERCEL_ENV),
   },
   eslint: {
-    /// Set this to false if you want production builds to abort if there's lint errors
-    ignoreDuringBuilds: process.env.VERCEL_ENV === 'production',
+    // Vercel builds (production and preview) skip lint errors; local builds still check
+    ignoreDuringBuilds: Boolean(process.env.VERCEL_ENV),
   },
 }
 

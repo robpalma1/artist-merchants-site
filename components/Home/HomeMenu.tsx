@@ -26,7 +26,7 @@ export const HomeMenu = ({ description, contact, information }) => {
       <AnimatePresence mode="wait">
         {menuOpen ? (
           <motion.nav
-            className="z-100 fixed inset-0 flex h-full w-full transform-gpu flex-col items-center justify-center gap-50 p-32 font-sans text-12 leading-[120%] will-change-transform md:text-14"
+            className="z-100 fixed inset-0 flex h-full w-full transform-gpu flex-col items-center justify-center gap-24 p-32 font-sans md:gap-28 text-12 leading-[120%] will-change-transform md:text-14"
             initial={{ opacity: 1, scale: 1 }}
             animate={{
               opacity: menuActiveItem === null ? 1 : 0,
@@ -55,7 +55,7 @@ export const HomeMenu = ({ description, contact, information }) => {
                 components={{
                   block: {
                     normal: ({ children }) => (
-                      <p className="text-left font-serif text-18 leading-[130%] last-of-type:pb-0 md:text-20">
+                      <p className="text-left font-sans text-14 leading-[150%] tracking-[0.01em] last-of-type:pb-0 md:text-15">
                         {children}
                       </p>
                     ),
@@ -97,7 +97,7 @@ const MenuButton = ({
 }) => {
   return (
     <motion.button
-      className="ease text-20 uppercase transition-colors duration-300 will-change-auto hover:border-[#888888] active:border-[#888888]"
+      className="ease text-13 uppercase tracking-[0.08em] md:text-14 transition-colors duration-300 will-change-auto hover:border-[#888888] active:border-[#888888]"
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -8, opacity: 0 }}

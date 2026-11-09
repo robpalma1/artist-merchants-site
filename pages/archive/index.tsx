@@ -6,7 +6,7 @@ import { mixpanel } from 'lib/mixpanel'
 export default function Archive({ page, settings }) {
   useEffect(() => {
     try {
-      const clientName = document.cookie.match(/(?:^|;\\s*)client_name=([^;]*)/)?.[1]
+      const clientName = document.cookie.match(/(?:^|;\s*)client_name=([^;]*)/)?.[1]
       const name = clientName ? decodeURIComponent(clientName) : 'unknown'
       mixpanel.track('Archive Viewed', {
         url: window.location.href,
